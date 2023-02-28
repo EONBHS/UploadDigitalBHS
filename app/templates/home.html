@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body class="w3-container">
+ <table class="w3-table-all">
+	 
+    <tr>
+        <td>
+            Item
+        </td>
+    </tr>
+    {%for user in users %}
+    <tr>
+        <td>
+            {{ users }}
+        </td>
+    </tr>
+    {% endfor %}
+ </table>
+ <form action="/zip" method="post" enctype="multipart/form-data">
+    <label for="file">Select a .zip file:</label>
+    <input type="file" id="file" name="file" accept=".zip">
+    <br><br>
+    <input type="submit" value="Upload">
+  </form>
+
+
+
+  <iframe src="static/index.html" width="1024" height="600"></iframe>
+
+    
+</body>
+</html>
+
